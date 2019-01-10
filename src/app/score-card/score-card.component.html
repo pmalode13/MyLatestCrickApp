@@ -1,0 +1,56 @@
+<h1>Score Card</h1>
+<h3>{{battingTeamName}}({{totalrun}}/{{totalwick}})</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr ><td><b>Batting</b></td><td><b>{{battingTeamName}}</b></td></tr>
+    <tr>
+      <th scope="col">Batsman</th>
+      <th scope="col">R</th>
+      <th scope="col">B</th>
+      <th scope="col">SR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let plaBat of battingTeam">
+    
+      <td>{{plaBat}}</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr> 
+    
+
+    <!-- <tr >
+    
+      <td>{{batsname1}}</td>
+      <td>{{runsof1}}</td>
+      <td>-</td>
+      <td>-</td>
+    </tr> -->
+  </tbody>
+</table>
+
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr ><td><b>Bowling</b></td><td><b>{{bowlingTeamName}}</b></td></tr>
+      <tr>
+        <th scope="col">Bowler</th>
+        <th scope="col">W</th>
+        <th scope="col">M</th>
+        <th scope="col">OV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plaBow of bowlingTeam">
+       
+        <td>{{plaBow}}</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      
+    </tbody>
+  </table>

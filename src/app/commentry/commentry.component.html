@@ -1,0 +1,30 @@
+<div class="col-sm-3 col-md-6">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" colspan="3"></th>
+                
+              </tr>
+          <tr>
+            <th scope="col">Over</th>
+            <th scope="col">Commentry</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cc of cmm">
+             <th scope="row">{{cc.over}}.{{cc.ball}}</th>
+           
+           <td>{{cc.description}}</td>
+            
+            
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      
+    </div>
+    

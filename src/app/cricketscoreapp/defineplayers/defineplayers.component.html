@@ -1,0 +1,67 @@
+<div class="d-flex flex-row">
+
+  <div class="col-sm-3 col-md-6">
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" colspan="3">Playing XI:{{matchserv.maTch[0].team1}}</th>
+        </tr>
+        <tr>
+          <td><label><b>Enter Player Name</b></label><input class="ml-5" type="text" #addplayer></td>
+          <td><button type="button" (click)="onAddPlayerClick()">Add Player</button></td>
+        </tr>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col"></th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cc of playername">
+         
+          <td>{{cc}}</td>
+          <td><button type="button" class="btn-danger" (click)="onClickOfDelete()">Delete</button></td>
+        </tr>
+        <tr><td><button class="float-right" type="button" (click)="onFirstFinalTeam()">Final Playing XI</button></td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="col-sm-3 col-md-6">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" >Playing XI{{matchserv.maTch[0].team2}}</th>
+
+        </tr>
+        <tr>
+        <tr>
+          <td><label><b>Enter Player Name</b></label><input class="ml-5" type="text" #addplayer2></td>
+          <td><button type="button" (click)="onAddPlayerClick2()">Add Player</button></td>
+
+        </tr>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Player Name</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dd of playername2;let i = index">
+         
+          <td>{{dd}}</td>
+          <td><button type="button" class="btn-danger" (click)="onClickOfDelete2(i)">Delete</button></td>
+        </tr>
+        <tr><td><button class="float-right" type="button" (click)="onSecondtFinalTeam()">Final Playing XI</button></td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+<div><button (click)="onStartMatchClicked()">Start Match</button>
